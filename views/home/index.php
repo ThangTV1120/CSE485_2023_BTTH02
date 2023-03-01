@@ -1,6 +1,6 @@
-
-<?php include 'header.php';
-include '/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
+<?php 
+    require_once('./CSE485_2023_BTTH02/configs/DBConnection.php');
+    include 'header.php'; 
 ?>
 
         <div id="carouselExampleIndicators" class="carousel slide">
@@ -17,7 +17,7 @@ include '/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
                 <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
+                <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide03.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -74,12 +74,13 @@ include '/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
         <li><a href="./index.php">Trang chủ</a></li>
         <li><a href="./index.php?controller=catelogy&action=list">Thể loại</a></li>
     </ul>
-    <h1>Tôi là TRANG CHỦ</h1>
+    <h1>Danh sách thể loại</h1>
     <?php
         foreach($categories as $category){
             echo "<br>{$category->getTitle()}"."        "."{$category->getTen()}</br>";
         }
     ?>
+
+    
 </body>
 </html>
-
