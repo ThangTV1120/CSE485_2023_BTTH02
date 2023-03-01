@@ -1,10 +1,14 @@
 <?php
+include("services/ArticleService.php");
 class ArticleController{
     public function index(){
-        echo "Tương tác với Services/Models from Article";
-        echo "Tương tác với View from Article";
+        // Nhiệm vụ 1: Tương tác với Services/Models
+        $articleService = new ArticleService();
+        $articles = $articleService->getAllArticles();
+        // Nhiệm vụ 2: Tương tác với View
+        include("views/home/index.php");
     }
-
+    
     public function add(){
         include("views/article/add_article.php");
     }
@@ -12,7 +16,11 @@ class ArticleController{
     public function list(){
         include("views/article/list_article.php");
     }
+<<<<<<< HEAD
+}
+=======
 
 
     
 }
+>>>>>>> 689d25e184d84900bf0e246cce9a8f977381661c

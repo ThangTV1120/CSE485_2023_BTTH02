@@ -12,7 +12,7 @@ class ArticleService{
         $sql = "SELECT * FROM baiviet INNER JOIN theloai ON baiviet.ma_tloai=theloai.ma_tloai";
         $stmt = $conn->query($sql);
 
-
+        
         // B3. Xử lý kết quả
         $articles = [];
         while($row = $stmt->fetch()){
