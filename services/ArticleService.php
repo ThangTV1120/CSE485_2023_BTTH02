@@ -8,13 +8,17 @@ class ArticleService{
        $conn = $dbConn->getConnection();
 
         // B2. Truy vấn
-        $sql = "SELECT COUNT(*) FROM user";
-        $stmt = $conn->query($sql);
 
+        $sql = "SELECT COUNT(*) FROM user";
+
+
+        
         // B3. Xử lý kết quả
         $articles = [];
         while($row = $stmt->fetch()){
+
             $article = new Article($row['user'], $row['tacgia'], $row['baiviet'], $row['theloai']);
+
             array_push($articles,$article);
         }
         // Mảng (danh sách) các đối tượng Article Model
