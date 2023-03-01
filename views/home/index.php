@@ -1,6 +1,6 @@
 <?php 
-    require_once('./CSE485_2023_BTTH02/configs/DBConnection.php');
-    include 'header.php'; 
+    include 'header.php';
+    // include '/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
 ?>
 
         <div id="carouselExampleIndicators" class="carousel slide">
@@ -34,19 +34,16 @@
     <main class="container-fluid mt-3" style="margin-bottom: 5%;">
         <h3 class="text-left text-uppercase mb-3 text-primary fw-bold fs-2 text-danger">TOP bài hát yêu thích</h3>
         <div class="row">
-            <?php
+        <?php
                 // Ket noi db
-                $conn = mysqli_connect('localhost','root','','btth01_cse485');
-                if(!$conn){
-                    die('Kết nối tới Server lỗi');
-                }
+                $dbConn = new DBConnection();
+                $conn = $dbConn->getConnection();
                 // Truy van
                 $sql = "SELECT * FROM baiviet ORDER BY ma_bviet";
-                $result = mysqli_query($conn, $sql); 
+                $result = $conn->query($sql);
                 // Xu li ket qua tra ve
-                if(mysqli_num_rows($result) > 0){
-                    while($row = mysqli_fetch_assoc($result)){
-                       
+            $row = $result->fetchAll();
+            foreach($row as $row){
             ?>
                 <div class="col-sm-3">
                     <div class="card mb-2 bg-danger border-red" style="width: 100%;">
@@ -61,26 +58,9 @@
                     </div>
                 </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <ul>
-        <li><a href="./index.php">Trang chủ</a></li>
-        <li><a href="./index.php?controller=catelogy&action=list">Thể loại</a></li>
-    </ul>
-    <h1>Danh sách thể loại</h1>
-    <?php
-        foreach($categories as $category){
-            echo "<br>{$category->getTitle()}"."        "."{$category->getTen()}</br>";
-        }
-    ?>
 
-    
-</body>
-</html>
+            <?php
+                }
+            ?>
+    </main>
+<?php include 'footer.php';?>
