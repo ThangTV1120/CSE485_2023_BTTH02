@@ -11,11 +11,13 @@ include '/xampp/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
     // Bước 01: Kết nối tới DB Server
     $dbConn = new DBConnection();
     $conn = $dbConn->getConnection();
+    $id=$_GET['id'];
     // Bước 02: Thực hiện truy vấn
-    $sql = "SELECT * FROM baiviet LEFT JOIN theloai on baiviet.ma_tloai=theloai.ma_tloai LEFT JOIN tacgia on baiviet.ma_tgia=tacgia.ma_tgia WHERE ma_bviet='1' ";
+    $sql = "SELECT * FROM baiviet LEFT JOIN theloai on baiviet.ma_tloai=theloai.ma_tloai LEFT JOIN tacgia on baiviet.ma_tgia=tacgia.ma_tgia WHERE ma_bviet=$id ";
     $result = $conn->query($sql);
     // $row = mysqli_fetch_assoc($result)
     $row=$result->fetch();
+    
     ?>
             <div class="row mb-5 padding-top: 2em;">
                 <div class="col-sm-4">
