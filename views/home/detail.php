@@ -1,5 +1,7 @@
-<?php include 'header.php'; 
-include("configs/DBConnection.php");?>
+<?php 
+include 'header.php'; 
+include '/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
+?>
 
 <main class="container mt-5" >
     <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
@@ -8,10 +10,10 @@ include("configs/DBConnection.php");?>
     $dbConn = new DBConnection();
     $conn = $dbConn->getConnection();
     // Bước 02: Thực hiện truy vấn
-    $sql = "SELECT * FROM baiviet LEFT JOIN theloai on baiviet.ma_tloai=theloai.ma_tloai LEFT JOIN tacgia on baiviet.ma_tgia=tacgia.ma_tgia WHERE ma_bviet=$id ";
+    $sql = "SELECT * FROM baiviet LEFT JOIN theloai on baiviet.ma_tloai=theloai.ma_tloai LEFT JOIN tacgia on baiviet.ma_tgia=tacgia.ma_tgia WHERE ma_bviet='1' ";
     $result = $conn->query($sql);
     // $row = mysqli_fetch_assoc($result)
-  
+    $row=$result->fetch();
     ?>
             <div class="row mb-5 padding-top: 2em;">
                 <div class="col-sm-4">
