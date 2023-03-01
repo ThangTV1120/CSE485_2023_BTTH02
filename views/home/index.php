@@ -11,13 +11,13 @@ include("configs/DBConnection.php");
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="2000">
-                <img src="images/slideshow/slide01.jpg" class="d-block w-100" alt="...">
+                <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide01.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                <img src="images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
+                <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                <img src="images/slideshow/slide03.jpg" class="d-block w-100" alt="...">
+                <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
