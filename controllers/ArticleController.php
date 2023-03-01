@@ -12,4 +12,7 @@ class ArticleController{
     public function list(){
         include("views/article/list_article.php");
     }
+
+
+    
 }
