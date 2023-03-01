@@ -1,6 +1,6 @@
 <?php
 include("configs/DBConnection.php");
-include("models/Category.php");
+include("models/Author.php");
 
 class CategoryService
 {
@@ -12,12 +12,12 @@ class CategoryService
         $sql = "SELECT * FROM theloai";
         $stmt = $conn->query($sql);
 
-        $catelogies = [];
+        $authors = [];
         while($row = $stmt->fetch()){
-            $category = new Category($row['ma_tloai'],$row['ten_tloai']);
-            array_push($catelogies,$category);
+            $author = new Author($row['ma_tgia'],$row['ten_tloai']);
+            array_push($authors,$author);
         }
-        return $catelogies;
+        return $authors;
     }
 }
 
