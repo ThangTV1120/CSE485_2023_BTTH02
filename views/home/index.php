@@ -1,6 +1,6 @@
 <?php 
     include 'header.php';
-    // include '/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
+    include '/xampp/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
 ?>
 
         <div id="carouselExampleIndicators" class="carousel slide">
