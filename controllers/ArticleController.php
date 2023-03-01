@@ -21,4 +21,7 @@ class ArticleController{
         // Nhiệm vụ 2: Tương tác với View
         include("views/article/list_article.php");
     }
+
+
+    
 }

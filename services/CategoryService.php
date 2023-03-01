@@ -1,8 +1,8 @@
 <?php
 include("configs/DBConnection.php");
-include("models/Catelogy.php");
+include("models/Category.php");
 
-class CatelogyService
+class CategoryService
 {
     public function getAllCatelogy()
     {
@@ -14,8 +14,8 @@ class CatelogyService
 
         $catelogies = [];
         while($row = $stmt->fetch()){
-            $catelogy = new Catelogy($row['ma_tloai'],$row['ten_tloai']);
-            array_push($catelogies,$catelogy);
+            $category = new Category($row['ma_tloai'],$row['ten_tloai']);
+            array_push($catelogies,$category);
         }
         // Mảng (danh sách) các đối tượng Article Model
 

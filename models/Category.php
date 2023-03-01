@@ -1,5 +1,5 @@
 <?php
-class Catelogy{
+class Category{
     // Thuộc tính
 
     private $ma_tloai;
@@ -14,5 +14,10 @@ class Catelogy{
     // Setter và Getter
     public function getTitle(){
         return $this->ma_tloai;
+    }
+
+    public function getTen()
+    {
+        return $this->ten_tloai;
     }
 }
