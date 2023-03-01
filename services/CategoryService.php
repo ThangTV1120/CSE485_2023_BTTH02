@@ -17,8 +17,6 @@ class CategoryService
             $category = new Category($row['ma_tloai'],$row['ten_tloai']);
             array_push($catelogies,$category);
         }
-        // Mảng (danh sách) các đối tượng Article Model
-
         return $catelogies;
     }
 }
