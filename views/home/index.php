@@ -11,11 +11,13 @@
         <li><a href="./index.php">Trang chủ</a></li>
         <li><a href="./index.php?controller=catelogy&action=list">Thể loại</a></li>
     </ul>
-    <h1>Tôi là TRANG CHỦ</h1>
+    <h1>Danh sách thể loại</h1>
     <?php
         foreach($categories as $category){
             echo "<br>{$category->getTitle()}"."        "."{$category->getTen()}</br>";
         }
     ?>
+
+    
 </body>
 </html>
