@@ -15,6 +15,7 @@
     <?php
         foreach($articles as $article){
             echo "<p>{$article->getTitle()}</p>";
+            echo'i=';
         }
     ?>
 </body>
