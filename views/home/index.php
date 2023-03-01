@@ -1,4 +1,8 @@
-<?php include 'header.php';?>
+<?php 
+    require_once('./CSE485_2023_BTTH02/configs/DBConnection.php');
+    include 'header.php'; 
+?>
+
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -13,7 +17,7 @@
                 <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
+                <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide03.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

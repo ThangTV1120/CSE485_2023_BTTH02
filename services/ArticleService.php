@@ -10,7 +10,7 @@ class ArticleService{
         // B2. Truy vấn
         $sql = "SELECT * FROM article INNER JOIN category ON article.category_id=category.id"; // INNER JOIN category ON article.category_id=category.id
 
-
+        
         // B3. Xử lý kết quả
         $articles = [];
         // Mảng (danh sách) các đối tượng Article Model

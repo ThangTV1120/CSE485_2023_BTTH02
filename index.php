@@ -1,4 +1,3 @@
-
 <?php
 // B1: Bắt giá trị controller và action
 $controller = isset($_GET['controller'])?   $_GET['controller']:'home';
@@ -18,4 +17,3 @@ require_once($controllerPath);
 $myObj = new $controller();  //controller=home > new HomeController()
 $myObj->$action(); //action=index > index()
 ?>
-<?php include 'footer.php'; ?>
