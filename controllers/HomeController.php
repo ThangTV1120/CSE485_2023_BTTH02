@@ -1,12 +1,10 @@
 <?php
-include("services/ArticleService.php");
+include("services/CategoryService.php");
+
 class HomeController{
-    // Hàm xử lý hành động index
     public function index(){
-        // Nhiệm vụ 1: Tương tác với Services/Models
-        $articelService = new ArticleService();
-        $articles = $articelService->getAllArticles();
-        // Nhiệm vụ 2: Tương tác với View
+        $categoryService = new CategoryService();
+        $categories = $categoryService->getAllCatelogy();
         include("views/home/index.php");
     }
 }

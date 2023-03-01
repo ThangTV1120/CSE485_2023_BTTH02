@@ -16,4 +16,11 @@ class ArticleController{
     public function list(){
         include("views/article/list_article.php");
     }
+<<<<<<< HEAD
 }
+=======
+
+
+    
+}
+>>>>>>> 689d25e184d84900bf0e246cce9a8f977381661c
