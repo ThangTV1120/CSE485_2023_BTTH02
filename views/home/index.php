@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php 
     require_once('./CSE485_2023_BTTH02/configs/DBConnection.php');
     include 'header.php'; 
@@ -61,8 +60,6 @@
                         </div>
                     </div>
                 </div>
-=======
->>>>>>> 689d25e184d84900bf0e246cce9a8f977381661c
 
 <!DOCTYPE html>
 <html lang="en">
@@ -87,4 +84,3 @@
     
 </body>
 </html>
-
