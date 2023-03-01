@@ -1,6 +1,6 @@
 <?php 
     include 'header.php';
-    include '/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
+    // include '/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
 ?>
 
         <div id="carouselExampleIndicators" class="carousel slide">
@@ -42,7 +42,8 @@
                 $sql = "SELECT * FROM baiviet ORDER BY ma_bviet";
                 $result = $conn->query($sql);
                 // Xu li ket qua tra ve
-
+            $row = $result->fetchAll();
+            foreach($row as $row){
             ?>
                 <div class="col-sm-3">
                     <div class="card mb-2 bg-danger border-red" style="width: 100%;">
@@ -58,6 +59,7 @@
                 </div>
 
             <?php
+                }
             ?>
     </main>
 <?php include 'footer.php';?>

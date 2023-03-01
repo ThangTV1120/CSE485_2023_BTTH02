@@ -1,5 +1,5 @@
 <?php include 'header.php'; 
-include("configs/DBConnection.php");?>
+include("/XAMPP/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php");?>
 
 <main class="container mt-5" >
     <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
