@@ -21,7 +21,7 @@ include '../../configs/DBConnection.php';
     ?>
             <div class="row mb-5 padding-top: 2em;">
                 <div class="col-sm-4">
-                    <img src="<?php echo $row['hinhanh'] ?>" class="img-fluid" alt="...">
+                    <img src="<?php echo "CSE485_2023_BTTH02".$row['hinhanh'];?>" class="img-fluid" alt="...">
                 </div>
                 <div class="col-sm-8">
                     <h5 class="card-title mb-2">

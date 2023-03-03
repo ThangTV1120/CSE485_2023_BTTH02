@@ -1,6 +1,6 @@
 <?php 
     include 'header.php';
-    include '../../configs/DBConnection.php';
+    include '/xampp/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
 ?>
 
         <div id="carouselExampleIndicators" class="carousel slide">
@@ -11,13 +11,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="2000">
-                <img src="../../assets/images/slideshow/slide01.jpg" class="d-block w-100" alt="...">
+                <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide01.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                <img src="../../assets/images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
+                <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                <img src="../../assets/images/slideshow/slide03.jpg" class="d-block w-100" alt="...">
+                <img src="/CSE485_2023_BTTH02/assets/images/slideshow/slide03.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -47,10 +47,11 @@
             ?>
                 <div class="col-sm-3">
                     <div class="card mb-2 bg-danger border-red" style="width: 100%;">
-                        <img src="<?= $row['hinhanh']?>" class="card-img-top" alt="...">
+                    
+                        <img src="<?php echo "CSE485_2023_BTTH02".$row['hinhanh'];?>" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="detail.php?id=<?= $row['ma_bviet']?>" class="text-decoration-none text-white fw-bold">
+                            <a href="index.php?action=detail&id=3" class="text-decoration-none text-white fw-bold">
                                 <?php echo $row['ten_bhat'];?>
                             </a>
                         </h5>
