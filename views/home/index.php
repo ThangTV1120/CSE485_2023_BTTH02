@@ -51,7 +51,7 @@
                         <img src="<?php echo "CSE485_2023_BTTH02".$row['hinhanh'];?>" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="index.php?action=detail&id=3" class="text-decoration-none text-white fw-bold">
+                            <a href="index.php?action=detail&id=<?=$row['ma_bviet']?>" class="text-decoration-none text-white fw-bold">
                                 <?php echo $row['ten_bhat'];?>
                             </a>
                         </h5>
