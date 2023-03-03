@@ -1,26 +1,31 @@
 <?php
 include("services/ArticleService.php");
+require_once("../models/Article.php");
 class ArticleController{
+    public function __construct()
+    {
+        
+    }
+
     public function index(){
-        // Nhiệm vụ 1: Tương tác với Services/Models
-        $articleService = new ArticleService();
+        $articleService = new ArticleService(); 
         $articles = $articleService->getAllArticles();
-        // Nhiệm vụ 2: Tương tác với View
         include("views/home/index.php");
     }
     
-    public function add(){
+    public function add_article(){
         include("views/article/add_article.php");
     }
 
-    public function list(){
+    public function list_article(){
         include("views/article/list_article.php");
     }
-<<<<<<< HEAD
-}
-=======
 
+    public function update_article(){
+        include("views/article/update_article.php");
+    }
 
-    
+    public function delete_article(){
+        include("views/article/delete_article.php");
+    }
 }
->>>>>>> 689d25e184d84900bf0e246cce9a8f977381661c
