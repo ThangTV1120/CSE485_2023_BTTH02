@@ -1,7 +1,7 @@
 
 <?php 
 include 'header.php'; 
-include '/xampp/htdocs/CSE485_2023_BTTH02/configs/DBConnection.php';
+include '../../configs/DBConnection.php';
 ?>
 
 
