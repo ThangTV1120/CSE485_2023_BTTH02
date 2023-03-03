@@ -47,10 +47,11 @@
             ?>
                 <div class="col-sm-3">
                     <div class="card mb-2 bg-danger border-red" style="width: 100%;">
-                        <img src="<?php echo $row['hinhanh'];?>" class="card-img-top" alt="...">
+                    
+                        <img src="<?php echo "CSE485_2023_BTTH02".$row['hinhanh'];?>" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title text-center">
-                            <a href="detail.php?id=<?= $row['ma_bviet']?>" class="text-decoration-none text-white fw-bold">
+                            <a href="index.php?action=detail&id=3" class="text-decoration-none text-white fw-bold">
                                 <?php echo $row['ten_bhat'];?>
                             </a>
                         </h5>
