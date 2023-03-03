@@ -1,10 +1,13 @@
 <?php
-include("services/CategoryService.php");
-
+define("APP_ROOT",dirname(__FILE__),3);
 class HomeController{
     public function index(){
-        $categoryService = new CategoryService();
-        $categories = $categoryService->getAllCatelogy();
+        //echo APP_ROOT;
         include("views/home/index.php");
+        
+    }
+    public function detail(){
+        include("views/home/detail.php");
     }
 }
+?>
