@@ -35,22 +35,147 @@
 // B1: Bắt giá trị controller và action
 $controller = isset($_GET['controller']) ?   $_GET['controller'] : 'home';
 $action     = isset($_GET['action']) ?       $_GET['action'] : 'index';
+$do         = isset($_GET['do'])         ?   $_GET['do']:null;
 
-switch ($controller) {
-                   case 'home':
-                                      switch ($action) {
-                                                         case 'index':
-                                                                            require('controllers/HomeController.php');
-                                                                            $controller = new HomeController();
-                                                                            $controller->index();
-                                                                            break;
-                                                        case 'detail':
-                                                            include('controllers/HomeController.php');
-                                                            $controller = new HomeController();
-                                                            $controller->detail();
-                                                            break;
-                                     
-                
+if ($controller == 'home') {
+    require('controllers/HomeController.php');
+    $controller = new HomeController();
+    if ($action == "index") {
+        $controller->index();
+    } else if ($action == "detail") {
+    
+        $controller->detail();
+    }
 }
+if ($controller == 'admin') {
+    if ($action == "admin") {
+        include('views/admin/admin.php');
+    } 
+    if ($action == "author") {
+        require('controllers/AuthorController.php');
+        $controller = new AuthorController();
+        if ($do == "list") {
+            $controller->list();
+        } elseif ($do == "add") {
+            // $controller->add();
+        } elseif ($do == "delete") {
+            $controller->delete();
+        }  elseif ($do==="update") {
+            $controller->update();
+        }
+    } 
+    if ($action == "category") {
+        require ('controllers/CategoryController.php');
+        $controller = new CategoryController();
+        if ($do == "list") {
+           
+            $controller->list();
+        } elseif ($do == "add") {
+
+            $controller->add();
+        } elseif ($do == "delete") {
+
+            $controller->delete();
+        } elseif ($do == "update") {
+
+            $controller->update();
+        }
+    } 
+    if ($action == "article") {
+        require('controllers/ArticleController.php');
+        $controller = new ArticleController();
+        if ($do == "list") {
+
+            $controller->list();
+        } elseif ($do == "add") {
+
+            $controller->add();
+        } elseif ($do == "delete") {
+
+            $controller->delete();
+        } elseif ($do == "update") {
+
+            $controller->update();
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// switch ($controller) {
+//     case 'home':{
+//         switch ($action) {
+//             case 'index':
+//                 require('controllers/HomeController.php');
+//                 $controller = new HomeController();
+//                 $controller->index();
+//                 break;
+//             case 'detail':
+//                 include('controllers/HomeController.php');
+//                 $controller = new HomeController();
+//                 $controller->detail();
+//                 break;
+//         }
+//     }
+//     case 'admin': {
+//             switch($action) {
+//                 case 'admin':
+//                     include('views/admin/admin.php');
+//                 case 'category': 
+//                         switch ($do) {
+//                             case 'list':
+//                                 require('controllers/CategoryController.php');
+//                                 $controller = new CategoryController();
+//                                 $controller->list();
+//                                 break;
+//                         }
+
+//                 case 'author': 
+//                         switch ($do) {
+//                             case 'list':
+//                                 require('controllers/AuthorController.php');
+//                                 $controller = new AuthorController();
+//                                 $controller->list();
+//                                 break;
+//                         }
+
+
+//                 case 'article': 
+//                         switch ($do) {
+//                             case 'list':
+//                                 require('controllers/ArticleController.php');
+//                                 $controller = new ArticleController();
+//                                 $controller->list();
+//                                 break;
+//                         }
+//                     }
+
+//         }
+// }
 ?>

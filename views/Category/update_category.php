@@ -1,7 +1,7 @@
 <?php 
-   include '../admin/header_admin.php';
-    include '../../configs/DBConnection.php';
-?>
+   include 'views/admin/header_admin.php';
+   include( 'configs/DBConnection.php');
+   ?>
 
 <main class="container mt-5 mb-5">
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
@@ -39,5 +39,4 @@
             </div>
         </div>
     </main>
-
-    <?php include '../admin/footer_admin.php';?>
+    <?php include '/xampp/htdocs/CSE485_2023_BTTH02/views/admin/footer_admin.php';?>

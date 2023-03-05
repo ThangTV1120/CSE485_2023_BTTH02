@@ -1,6 +1,6 @@
-<?php include('../admin/header_admin.php'); 
-      include ('../../configs/DBConnection.php'); 
-      include ('../../models/Article.php'); 
+<?php    include 'views/admin/header_admin.php';
+   include( 'configs/DBConnection.php');
+     // include ('../../models/Article.php'); 
       ?>
 
     <main class="container mt-5 mb-5">

@@ -1,5 +1,5 @@
-<?php include('../admin/header_admin.php'); 
-      include '../../configs/DBConnection.php'; ?>
+<?php   include 'views/admin/header_admin.php';
+   include( 'configs/DBConnection.php');?>
 
     <main class="container mt-5 mb-5">
         <div class="row">

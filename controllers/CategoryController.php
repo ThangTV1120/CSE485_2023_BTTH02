@@ -1,27 +1,29 @@
 <?php
-class CatelogyController{
+class CategoryController{
     // Hàm xử lý hành động index
     public function index(){
-
+        
     }
 
     public function add(){
-        include("views/Catelogy/add_catelogy.php");
+        include("views/Category/add_category.php");
+    }
+
+
+    public function delete()
+    {
+        include("views/Categogy/delete_category.php");
+    }
+
+    public function list(){
+        include("views/Category/list_category.php");
     }
 
     public function update()
     {
-        include("views/Catelogy/update_catelogy.php");
+        // include("views/Categogy/update_category.php");
+         include("views/Category/update_category.php");
     }
-
-    public function delete()
-    {
-        include("views/Catelogy/delete_catelogy.php");
-    }
-
-    public function list(){
-        include("views/Catelogy/list_catelogy.php");
-    }
-
 
 }
+?>

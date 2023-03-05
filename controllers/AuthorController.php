@@ -8,12 +8,6 @@ class AuthorController{
     public function add(){
         include("views/Author/add_author.php");
     }
-
-    public function update()
-    {
-        include("views/Author/update_author.php");
-    }
-
     public function delete()
     {
         include("views/Author/delete_author.php");
@@ -23,6 +17,10 @@ class AuthorController{
         include("views/Author/list_author.php");
     }
 
+    public function update()
+    {
+        include("views/Author/update_author.php");
+    }
 
 }
 ?>

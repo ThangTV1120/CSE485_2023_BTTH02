@@ -1,10 +1,12 @@
-<?php include('../admin/header_admin.php'); 
-      include '../../configs/DBConnection.php'; ?>
+<?php 
+ include 'views/admin/header_admin.php';
+   include 'configs/DBConnection.php';
+?>
 
 <main class="container mt-5 mb-5">
 <div class="row">
                 <div class="col-sm">
-                    <a href="add_article.php" class="btn btn-success">Thêm mới</a>
+                    <a href="index.php?controller=admin&action=article&do=add" class="btn btn-success">Thêm mới</a>
                     <table class="table">
                         <thead>
                             <tr>
@@ -43,7 +45,7 @@
                                     <td><?=$row['ngayviet'] ?></td>
                                     <td><a href="<?=$row['hinhanh'] ?>"></a></td>
                                     <td>
-                                        <a href="update_article.php?id=<?=$row['ma_bviet'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                                        <a href="index.php?controller=admin&action=article&do=update&id=<?=$row['ma_bviet'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
                                     </td>
                                     <td>
                                         <a href="delete_article.php"><i class="fa-solid fa-trash"></i></a>
@@ -59,5 +61,4 @@
             </div>
         </main>
 
-<?php include('../admin/footer_admin.php'); ?>
-
+        <?php include '/xampp/htdocs/CSE485_2023_BTTH02/views/admin/footer_admin.php';?>

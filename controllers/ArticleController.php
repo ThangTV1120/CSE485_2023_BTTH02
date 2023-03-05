@@ -1,12 +1,12 @@
 <?php
-include("services/ArticleService.php");
+// include("services/ArticleService.php");
 class ArticleController{
     public function index(){
-        // Nhiệm vụ 1: Tương tác với Services/Models
-        $articleService = new ArticleService();
-        $articles = $articleService->getAllArticles();
-        // Nhiệm vụ 2: Tương tác với View
-        include("views/home/index.php");
+        // // Nhiệm vụ 1: Tương tác với Services/Models
+        // $articleService = new ArticleService();
+        // $articles = $articleService->getAllArticles();
+        // // Nhiệm vụ 2: Tương tác với View
+        // include("views/home/index.php");
     }
     
     public function add(){
@@ -15,6 +15,12 @@ class ArticleController{
 
     public function list(){
         include("views/article/list_article.php");
+    }
+    public function update(){
+        include("views/article/update_article.php");
+    }
+    public function delete(){
+        include("views/article/delete_article.php");
     }
 }
 ?>
