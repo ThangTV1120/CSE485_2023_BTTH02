@@ -66,7 +66,7 @@
 
                     <div class="form-group  float-end ">
                         <input type="submit" value="Lưu lại" name="btt_update" class="btn btn-success">
-                        <a href="list_article.php" class="btn btn-warning ">Quay lại</a>
+                        <a href="index.php?controller=admin&action=article&do=list" class="btn btn-warning ">Quay lại</a>
                     </div>
                 </form>
             </div>
